@@ -36,7 +36,7 @@ def index():
                 region = 2
             else:
                 region = 3
-            filename = 'C:\Users\HP\Downloads\Medical-Cost-Prediction-Heroku-Deployment-master\Medical-Cost-Prediction-Heroku-Deployment-master\model.pickle'
+            filename = 'model.pickle'
             loaded_model = pickle.load(open(filename, 'rb'))
             prediction = loaded_model.predict([[age,sex,bmi,children,smoker,region]])
             print('prediction is', prediction)
